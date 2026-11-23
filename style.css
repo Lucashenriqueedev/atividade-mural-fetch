@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 24px 16px;
+  background: #f1f5f9;
+  color: #172033;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+header,
+main {
+  max-width: 960px;
+  margin-inline: auto;
+}
+
+header h1 {
+  margin: 0;
+}
+
+.controles {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 16px;
+}
+
+.campo {
+  display: grid;
+  flex: 1 1 220px;
+  gap: 4px;
+}
+
+button,
+input {
+  font: inherit;
+  padding: 10px 14px;
+  border-radius: 8px;
+}
+
+button {
+  border: 1px solid transparent;
+  background: #1d4ed8;
+  color: white;
+  cursor: pointer;
+}
+
+input {
+  width: 100%;
+  border: 1px solid #64748b;
+  background: white;
+  color: inherit;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid #1d4ed8;
+  outline-offset: 3px;
+}
+
+button:disabled,
+input:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+#mensagem {
+  margin-block: 16px;
+}
+
+#mensagem.carregando {
+  color: #1e40af;
+}
+
+#mensagem.erro {
+  color: #991b1b;
+  font-weight: bold;
+}
+
+#lista-posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 16px;
+}
+
+.cartao {
+  padding: 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  background: white;
+  overflow-wrap: anywhere;
+}
+
+.cartao h2 {
+  margin: 8px 0;
+  font-size: 1.2rem;
+}
+
+.cartao p {
+  margin: 0;
+}
+
+.cartao .numero {
+  color: #475569;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
